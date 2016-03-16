@@ -15,6 +15,8 @@
 #import <MJExtension.h>
 #import "JXCompanyInfo.h"
 #import "JXImpression.h"
+#import <UIViewController+MMDrawerController.h>
+
 
 @interface JXImpressionViewController () <CLLocationManagerDelegate>
 /** 位置管理者 */
@@ -85,7 +87,6 @@
     [self setupLocation];
     
     [self loadNewImpressions];
-    
 }
 
 /**
@@ -137,6 +138,7 @@
  */
 - (void)setupNavIcon {
     UIButton *iconButton = [[UIButton alloc] init];
+    iconButton.adjustsImageWhenHighlighted = NO;
     iconButton.layer.borderColor = [UIColor whiteColor].CGColor;
     iconButton.layer.borderWidth = 1;
     iconButton.layer.cornerRadius = 20;
@@ -145,6 +147,15 @@
     iconButton.frame = CGRectMake(0, 0, 40, 40);
     
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:iconButton];
+    
+    [iconButton addTarget:self action:@selector(leftIconButtonClicked) forControlEvents:UIControlEventTouchUpInside];
+}
+
+/**
+ *  导航栏上的头像被点击了
+ */
+- (void)leftIconButtonClicked {
+    [self.mm_drawerController toggleDrawerSide:MMDrawerSideLeft animated:YES completion:nil];
 }
 
 /**

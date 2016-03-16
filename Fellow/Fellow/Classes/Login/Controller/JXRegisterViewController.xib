@@ -37,7 +37,7 @@
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iDe-aV-JXD">
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iDe-aV-JXD">
                     <rect key="frame" x="20" y="260" width="93" height="23"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <state key="normal" title="我同意遵守" image="select_false">
@@ -48,7 +48,7 @@
                         <action selector="agreeButtonClicked:" destination="-1" eventType="touchUpInside" id="Crt-H5-621"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NNh-4y-gpb">
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NNh-4y-gpb">
                     <rect key="frame" x="118" y="257" width="98" height="29"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <state key="normal" title="老乡侃服务协议"/>
@@ -56,7 +56,7 @@
                         <action selector="serviceButtonClicked" destination="-1" eventType="touchUpInside" id="7Fb-8m-7rt"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3uM-fN-6FF">
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3uM-fN-6FF">
                     <rect key="frame" x="40" y="316" width="240" height="40"/>
                     <color key="backgroundColor" red="0.97647058819999999" green="0.62745098040000002" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
