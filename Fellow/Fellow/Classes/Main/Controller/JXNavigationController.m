@@ -18,9 +18,16 @@
     [super viewDidLoad];
 
     UINavigationBar *navBar = [UINavigationBar appearance];
-    [navBar setTitleTextAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:22]}];
+    [navBar setTitleTextAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:22], NSForegroundColorAttributeName:[UIColor whiteColor]}];
 }
 
-
+- (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated {
+    
+    if (self.childViewControllers.count >= 1) {
+        viewController.hidesBottomBarWhenPushed = YES;
+    }
+    
+    [super pushViewController:viewController animated:animated];
+}
 
 @end

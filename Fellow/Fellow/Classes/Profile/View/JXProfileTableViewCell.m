@@ -7,6 +7,7 @@
 //
 
 #import "JXProfileTableViewCell.h"
+#import "JXProfileCellModel.h"
 
 @interface JXProfileTableViewCell()
 @property (weak, nonatomic) IBOutlet UIImageView *imgView;
@@ -18,29 +19,18 @@
 
 @implementation JXProfileTableViewCell
 
-- (void)setBadge:(NSInteger)badge {
-    _badge = badge;
+- (void)setProfileModel:(JXProfileCellModel *)profileModel {
+    _profileModel = profileModel;
     
-    self.badgeView.hidden = !badge;
-    self.badgeView.text = [NSString stringWithFormat:@"%zd", badge];
-}
-
-- (void)setImageName:(NSString *)imageName {
-    _imageName = imageName;
+    self.badgeView.hidden = !profileModel.badge;
+    self.badgeView.text = [NSString stringWithFormat:@"%zd", profileModel.badge];
     
-    self.imageView.image = [UIImage imageNamed:imageName];
-}
-
-- (void)setTitle:(NSString *)title {
-    _title = title;
+    self.imageView.image = [UIImage imageNamed:profileModel.imageName];
     
-    self.titleLabel.text = title;
-}
-
-- (void)setAccessory:(BOOL)accessory {
-    _accessory = accessory;
+    self.titleLabel.text = profileModel.title;
     
-    self.accesView.hidden = !accessory;
+    self.accesView.hidden = !profileModel.accessory;
+    
 }
 
 + (NSString *)reuseIdentifier {

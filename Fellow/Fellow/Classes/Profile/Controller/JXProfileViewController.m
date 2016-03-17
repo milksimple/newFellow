@@ -8,12 +8,28 @@
 
 #import "JXProfileViewController.h"
 #import "JXProfileTableViewCell.h"
+#import "JXProfileCellModel.h"
+#import <MJExtension.h>
+#import "JXProfileHeaderView.h"
+#import <UIViewController+MMDrawerController.h>
+#import "JXNavigationController.h"
+#import "JXImpressionViewController.h"
+#import "JXFriendViewController.h"
 
-@interface JXProfileViewController ()
+@interface JXProfileViewController () <JXProfileHeaderViewDelegate>
+/** JXProfileMode数组 */
+@property (nonatomic, strong) NSMutableArray *profileModels;
 
 @end
 
 @implementation JXProfileViewController
+#pragma mark - 懒加载
+- (NSMutableArray *)profileModels {
+    if (_profileModels == nil) {
+        _profileModels = [JXProfileCellModel mj_objectArrayWithFilename:@"profileModel.plist"];
+    }
+    return _profileModels;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -42,54 +58,48 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     JXProfileTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:[JXProfileTableViewCell reuseIdentifier] forIndexPath:indexPath];
     
-    
-    
+    if (indexPath.section == 0) {
+        JXProfileCellModel *profileModel = self.profileModels[indexPath.row];
+        cell.profileModel = profileModel;
+    }
+    else if (indexPath.section == 1) {
+        JXProfileCellModel *profileModel = self.profileModels[indexPath.row + 5];
+        cell.profileModel = profileModel;
+    }
     return cell;
 }
 
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    if (section == 0) {
+        JXProfileHeaderView *header = [JXProfileHeaderView headerView];
+        header.delegate = self;
+        return header;
+    }
+    return nil;
 }
-*/
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    if (section == 0) {
+        return [JXProfileHeaderView headerHeight];
+    }
+    return 20;
 }
-*/
 
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
+#pragma mark - JXProfileHeaderViewDelegate
+- (void)profileHeaderViewDidClickedProfileInfoButton {
+    JXImpressionViewController * center = [[JXImpressionViewController alloc] init];
+    
+    JXNavigationController * nav = [[JXNavigationController alloc] initWithRootViewController:center];
+    
+    JXFriendViewController *friendVC = [[JXFriendViewController alloc] init];
+    
+    [self.mm_drawerController setCenterViewController:nav withCloseAnimation:YES completion:^(BOOL finished) {
+        [nav pushViewController:friendVC animated:YES];
+    }];
 }
-*/
 
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
+- (void)dealloc {
+    JXLog(@"JXProfileViewController - dealloc");
 }
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

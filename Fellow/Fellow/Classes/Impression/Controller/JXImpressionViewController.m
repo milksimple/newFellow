@@ -16,6 +16,7 @@
 #import "JXCompanyInfo.h"
 #import "JXImpression.h"
 #import <UIViewController+MMDrawerController.h>
+#import "JXFriendViewController.h"
 
 
 @interface JXImpressionViewController () <CLLocationManagerDelegate>
@@ -87,6 +88,16 @@
     [self setupLocation];
     
     [self loadNewImpressions];
+    
+    UIButton *tstButton = [[UIButton alloc] initWithFrame:CGRectMake(100, 200, 50, 50)];
+    tstButton.backgroundColor = [UIColor redColor];
+    [self.view addSubview:tstButton];
+    [tstButton addTarget:self action:@selector(tstButtonClicked) forControlEvents:UIControlEventTouchUpInside];
+    
+}
+
+- (void)tstButtonClicked {
+    [self.navigationController pushViewController:[[JXFriendViewController alloc] init] animated:YES];
 }
 
 /**
@@ -231,6 +242,10 @@
     }];
     
     [manager stopUpdatingLocation];
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    
 }
 
 @end

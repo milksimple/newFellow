@@ -7,16 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+@class JXProfileCellModel;
 
 @interface JXProfileTableViewCell : UITableViewCell
-/** 数字 */
-@property (nonatomic, assign) NSInteger badge;
 
-@property (nonatomic, copy) NSString *imageName;
-
-@property (nonatomic, copy) NSString *title;
-
-@property (nonatomic, assign) BOOL accessory;
+@property (nonatomic, strong) JXProfileCellModel *profileModel;
 
 + (NSString *)reuseIdentifier;
 

@@ -28,7 +28,7 @@
     
     // 判断之前是否登录过
     JXAccount *currentAccount = [JXAccountTool currentAccount];
-    if (currentAccount.hasLogin) {
+    if (!currentAccount.hasLogin) {
         self.window.rootViewController = [[JXTabBarViewController alloc] init];
     }
     else {

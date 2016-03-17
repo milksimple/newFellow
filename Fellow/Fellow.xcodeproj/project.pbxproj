@@ -18,6 +18,9 @@
 		043A0F651C995E82004DE53E /* JXProfileTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 043A0F631C995E82004DE53E /* JXProfileTableViewCell.xib */; };
 		043A0F681C996549004DE53E /* JXProfileCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 043A0F671C996549004DE53E /* JXProfileCellModel.m */; };
 		043A0F6A1C99658E004DE53E /* profileModel.plist in Resources */ = {isa = PBXBuildFile; fileRef = 043A0F691C99658E004DE53E /* profileModel.plist */; };
+		043A0F6D1C9A49CE004DE53E /* JXProfileHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 043A0F6C1C9A49CE004DE53E /* JXProfileHeaderView.m */; };
+		043A0F6F1C9A49E0004DE53E /* JXProfileHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 043A0F6E1C9A49E0004DE53E /* JXProfileHeaderView.xib */; };
+		043A0F721C9A5874004DE53E /* JXFriendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 043A0F711C9A5874004DE53E /* JXFriendViewController.m */; };
 		04F3A8291C911F39006B88F1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F3A8281C911F39006B88F1 /* main.m */; };
 		04F3A8341C911F39006B88F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04F3A8331C911F39006B88F1 /* Assets.xcassets */; };
 		04F3A8371C911F39006B88F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04F3A8351C911F39006B88F1 /* LaunchScreen.storyboard */; };
@@ -92,6 +95,11 @@
 		043A0F661C996549004DE53E /* JXProfileCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXProfileCellModel.h; sourceTree = "<group>"; };
 		043A0F671C996549004DE53E /* JXProfileCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JXProfileCellModel.m; sourceTree = "<group>"; };
 		043A0F691C99658E004DE53E /* profileModel.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = profileModel.plist; sourceTree = "<group>"; };
+		043A0F6B1C9A49CE004DE53E /* JXProfileHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXProfileHeaderView.h; sourceTree = "<group>"; };
+		043A0F6C1C9A49CE004DE53E /* JXProfileHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JXProfileHeaderView.m; sourceTree = "<group>"; };
+		043A0F6E1C9A49E0004DE53E /* JXProfileHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JXProfileHeaderView.xib; sourceTree = "<group>"; };
+		043A0F701C9A5874004DE53E /* JXFriendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXFriendViewController.h; sourceTree = "<group>"; };
+		043A0F711C9A5874004DE53E /* JXFriendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JXFriendViewController.m; sourceTree = "<group>"; };
 		04F3A8241C911F39006B88F1 /* Fellow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fellow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04F3A8281C911F39006B88F1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		04F3A8331C911F39006B88F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -232,6 +240,8 @@
 			children = (
 				043A0F5E1C995073004DE53E /* JXProfileViewController.h */,
 				043A0F5F1C995073004DE53E /* JXProfileViewController.m */,
+				043A0F701C9A5874004DE53E /* JXFriendViewController.h */,
+				043A0F711C9A5874004DE53E /* JXFriendViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -252,6 +262,9 @@
 				043A0F611C995E82004DE53E /* JXProfileTableViewCell.h */,
 				043A0F621C995E82004DE53E /* JXProfileTableViewCell.m */,
 				043A0F631C995E82004DE53E /* JXProfileTableViewCell.xib */,
+				043A0F6B1C9A49CE004DE53E /* JXProfileHeaderView.h */,
+				043A0F6C1C9A49CE004DE53E /* JXProfileHeaderView.m */,
+				043A0F6E1C9A49E0004DE53E /* JXProfileHeaderView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -687,6 +700,7 @@
 				04F3A8371C911F39006B88F1 /* LaunchScreen.storyboard in Resources */,
 				04F3A8341C911F39006B88F1 /* Assets.xcassets in Resources */,
 				043A0F6A1C99658E004DE53E /* profileModel.plist in Resources */,
+				043A0F6F1C9A49E0004DE53E /* JXProfileHeaderView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -762,6 +776,7 @@
 				52CAA6521C9841E400A6761B /* JXImpression.m in Sources */,
 				043A0F641C995E82004DE53E /* JXProfileTableViewCell.m in Sources */,
 				04F3A8711C9124EB006B88F1 /* JXImpressionViewController.m in Sources */,
+				043A0F6D1C9A49CE004DE53E /* JXProfileHeaderView.m in Sources */,
 				043A0F4C1C9903FB004DE53E /* JXChooseCityViewController.m in Sources */,
 				52CAA6661C98468300A6761B /* JXRegisterViewController.m in Sources */,
 				52CAA6641C98468300A6761B /* JXLoginViewController.m in Sources */,
@@ -772,6 +787,7 @@
 				04F3A8741C91251D006B88F1 /* JXQuestionViewController.m in Sources */,
 				528EC5CC1C91A63E00064D8E /* AppDelegate.m in Sources */,
 				52CAA6351C98410600A6761B /* JXAccountTool.m in Sources */,
+				043A0F721C9A5874004DE53E /* JXFriendViewController.m in Sources */,
 				043A0F531C990602004DE53E /* JXProvince.m in Sources */,
 				04F3A86E1C912371006B88F1 /* JXNavigationController.m in Sources */,
 				52CAA6391C98412200A6761B /* MBProgressHUD+MJ.m in Sources */,

@@ -1,43 +1,24 @@
 //
-//  JXQuestionViewController.m
+//  JXFriendViewController.m
 //  Fellow
 //
-//  Created by mac on 16/3/10.
+//  Created by mac on 16/3/17.
 //  Copyright © 2016年 mac. All rights reserved.
 //
 
-#import "JXQuestionViewController.h"
 #import "JXFriendViewController.h"
 
-@interface JXQuestionViewController ()
+@interface JXFriendViewController ()
 
 @end
 
-@implementation JXQuestionViewController
+@implementation JXFriendViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    UIButton *titleButton = [[UIButton alloc] init];
-    titleButton.enabled = NO;
-    titleButton.frame = CGRectMake(0, 0, 120, 36);
-    titleButton.imageEdgeInsets = UIEdgeInsetsMake(0, 0, 0, 5);
-    titleButton.titleEdgeInsets = UIEdgeInsetsMake(0, 5, 0, 0);
-    [titleButton setTitle:@"鸟司问答" forState:UIControlStateNormal];
-    self.navigationController.navigationBar.barTintColor = JXColor(101, 205, 63);
-    [titleButton setImage:[UIImage imageNamed:@"nav_question"] forState:UIControlStateNormal];
-    self.navigationItem.titleView = titleButton;
-    
-    UIButton *tstButton = [[UIButton alloc] initWithFrame:CGRectMake(100, 200, 50, 50)];
-    tstButton.backgroundColor = [UIColor redColor];
-    [self.view addSubview:tstButton];
-    [tstButton addTarget:self action:@selector(tstButtonClicked) forControlEvents:UIControlEventTouchUpInside];
+    self.view.backgroundColor = [UIColor purpleColor];
 }
-
-- (void)tstButtonClicked {
-    [self.navigationController pushViewController:[[JXFriendViewController alloc] init] animated:YES];
-}
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

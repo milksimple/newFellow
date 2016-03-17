@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="p2v-kf-eSv" customClass="JXProfileHeaderView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KRA-vv-LBg">
+                    <rect key="frame" x="5" y="28" width="45" height="45"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="9XZ-fD-Rdi"/>
+                        <constraint firstAttribute="width" constant="45" id="I0k-OI-cpH"/>
+                    </constraints>
+                    <state key="normal" image="nav_icon_placeholder"/>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="黄志刚" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HY0-er-7yh">
+                    <rect key="frame" x="60" y="29" width="51" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="用户名：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="beb-0h-FLB">
+                    <rect key="frame" x="60" y="50" width="52" height="16"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" red="0.29411764705882354" green="0.29411764705882354" blue="0.29411764705882354" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ZASD123123" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qlc-DA-eum">
+                    <rect key="frame" x="112" y="50" width="79" height="16"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" red="0.29411764709999999" green="0.29411764709999999" blue="0.29411764709999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mcd-FP-EOx">
+                    <rect key="frame" x="240" y="40" width="70" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="70" id="9CO-Q4-UjX"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <state key="normal" image="accessory_right">
+                        <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="prifileInfoButtonClicked" destination="p2v-kf-eSv" eventType="touchUpInside" id="VtB-51-5FX"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="个人名片" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y8h-2M-3RS">
+                    <rect key="frame" x="240" y="40" width="60" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="mK3-C6-G5b"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="mcd-FP-EOx" secondAttribute="trailing" constant="10" id="26u-B6-Wc4"/>
+                <constraint firstItem="qlc-DA-eum" firstAttribute="bottom" secondItem="beb-0h-FLB" secondAttribute="bottom" id="3Sv-dB-HC3"/>
+                <constraint firstItem="HY0-er-7yh" firstAttribute="bottom" secondItem="KRA-vv-LBg" secondAttribute="centerY" id="8ou-EU-1fV"/>
+                <constraint firstItem="KRA-vv-LBg" firstAttribute="centerY" secondItem="p2v-kf-eSv" secondAttribute="centerY" id="NKJ-Wu-eSk"/>
+                <constraint firstItem="qlc-DA-eum" firstAttribute="top" secondItem="beb-0h-FLB" secondAttribute="top" id="Tx2-td-z8G"/>
+                <constraint firstItem="mcd-FP-EOx" firstAttribute="centerY" secondItem="p2v-kf-eSv" secondAttribute="centerY" id="XFn-hi-uqr"/>
+                <constraint firstItem="y8h-2M-3RS" firstAttribute="top" secondItem="mcd-FP-EOx" secondAttribute="top" id="Zi1-yC-WO0"/>
+                <constraint firstItem="qlc-DA-eum" firstAttribute="leading" secondItem="beb-0h-FLB" secondAttribute="trailing" id="c5G-C8-4XV"/>
+                <constraint firstItem="beb-0h-FLB" firstAttribute="leading" secondItem="HY0-er-7yh" secondAttribute="leading" id="h0A-Ij-Tgk"/>
+                <constraint firstItem="y8h-2M-3RS" firstAttribute="leading" secondItem="mcd-FP-EOx" secondAttribute="leading" id="hP4-qj-47l"/>
+                <constraint firstItem="y8h-2M-3RS" firstAttribute="bottom" secondItem="mcd-FP-EOx" secondAttribute="bottom" id="lOc-nP-0jR"/>
+                <constraint firstItem="HY0-er-7yh" firstAttribute="leading" secondItem="KRA-vv-LBg" secondAttribute="trailing" constant="10" id="uS6-oX-UcT"/>
+                <constraint firstItem="KRA-vv-LBg" firstAttribute="leading" secondItem="p2v-kf-eSv" secondAttribute="leading" constant="5" id="va8-5W-pGk"/>
+                <constraint firstItem="beb-0h-FLB" firstAttribute="top" secondItem="KRA-vv-LBg" secondAttribute="centerY" id="yHx-0Y-5qR"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="iconView" destination="KRA-vv-LBg" id="yms-0h-QMj"/>
+                <outlet property="nicknameLabel" destination="HY0-er-7yh" id="rGu-6d-Vqf"/>
+                <outlet property="telephoneLabel" destination="qlc-DA-eum" id="LhS-qW-vPQ"/>
+            </connections>
+            <point key="canvasLocation" x="514" y="371"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="accessory_right" width="10" height="20"/>
+        <image name="nav_icon_placeholder" width="250" height="242"/>
+    </resources>
+</document>

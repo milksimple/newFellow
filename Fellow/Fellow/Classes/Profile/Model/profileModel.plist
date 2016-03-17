@@ -14,9 +14,9 @@
 	</dict>
 	<dict>
 		<key>imageName</key>
-		<string></string>
+		<string>profile_question</string>
 		<key>title</key>
-		<string></string>
+		<string>我的问答</string>
 		<key>badge</key>
 		<integer>0</integer>
 		<key>accessory</key>
@@ -24,9 +24,9 @@
 	</dict>
 	<dict>
 		<key>imageName</key>
-		<string></string>
+		<string>profile_impression</string>
 		<key>title</key>
-		<string></string>
+		<string>我的印象</string>
 		<key>badge</key>
 		<integer>0</integer>
 		<key>accessory</key>
@@ -34,9 +34,9 @@
 	</dict>
 	<dict>
 		<key>imageName</key>
-		<string></string>
+		<string>profile_roommates</string>
 		<key>title</key>
-		<string></string>
+		<string>合租信息</string>
 		<key>badge</key>
 		<integer>0</integer>
 		<key>accessory</key>
@@ -44,9 +44,9 @@
 	</dict>
 	<dict>
 		<key>imageName</key>
-		<string></string>
+		<string>profile_follow</string>
 		<key>title</key>
-		<string></string>
+		<string>关注</string>
 		<key>badge</key>
 		<integer>0</integer>
 		<key>accessory</key>
@@ -54,23 +54,23 @@
 	</dict>
 	<dict>
 		<key>imageName</key>
-		<string></string>
+		<string>profile_setting</string>
 		<key>title</key>
-		<string></string>
+		<string>设置</string>
 		<key>badge</key>
 		<integer>0</integer>
 		<key>accessory</key>
-		<false/>
+		<true/>
 	</dict>
 	<dict>
 		<key>imageName</key>
-		<string></string>
+		<string>profile_help</string>
 		<key>title</key>
-		<string></string>
+		<string>帮助</string>
 		<key>badge</key>
 		<integer>0</integer>
 		<key>accessory</key>
-		<false/>
+		<true/>
 	</dict>
 </array>
 </plist>
