@@ -7,6 +7,7 @@
 //
 
 #import "JXNavigationController.h"
+#import "JXTabBarViewController.h"
 
 @interface JXNavigationController ()
 
@@ -22,7 +23,6 @@
 }
 
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated {
-    
     if (self.childViewControllers.count >= 1) {
         viewController.hidesBottomBarWhenPushed = YES;
     }

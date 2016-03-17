@@ -21,7 +21,7 @@
 
 #import "MMDrawerController.h"
 #import "UIViewController+MMDrawerController.h"
-
+#import "UIView+MJExtension.h"
 #import <QuartzCore/QuartzCore.h>
 
 CGFloat const MMDrawerDefaultWidth = 280.0f;
@@ -299,6 +299,8 @@ static NSString *MMDrawerOpenSideKey = @"MMDrawerOpenSide";
          animations:^{
              [self setNeedsStatusBarAppearanceUpdateIfSupported];
              [self.centerContainerView setFrame:newFrame];
+             // 修改tabbar位置
+             self.tabBarController.tabBar.mj_x = newFrame.origin.x;
              [self updateDrawerVisualStateForDrawerSide:visibleSide percentVisible:0.0];
          }
          completion:^(BOOL finished) {
@@ -355,6 +357,7 @@ static NSString *MMDrawerOpenSideKey = @"MMDrawerOpenSide";
              animations:^{
                  [self setNeedsStatusBarAppearanceUpdateIfSupported];
                  [self.centerContainerView setFrame:newFrame];
+                 self.tabBarController.tabBar.mj_x = newFrame.origin.x;
                  [self updateDrawerVisualStateForDrawerSide:drawerSide percentVisible:1.0];
              }
              completion:^(BOOL finished) {

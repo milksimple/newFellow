@@ -89,17 +89,7 @@
     
     [self loadNewImpressions];
     
-    UIButton *tstButton = [[UIButton alloc] initWithFrame:CGRectMake(100, 200, 50, 50)];
-    tstButton.backgroundColor = [UIColor redColor];
-    [self.view addSubview:tstButton];
-    [tstButton addTarget:self action:@selector(tstButtonClicked) forControlEvents:UIControlEventTouchUpInside];
-    
 }
-
-- (void)tstButtonClicked {
-    [self.navigationController pushViewController:[[JXFriendViewController alloc] init] animated:YES];
-}
-
 /**
  *  初始化定位
  */

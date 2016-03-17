@@ -12,6 +12,8 @@
 #import "JXLoginViewController.h"
 #import <SMS_SDK/SMSSDK.h>
 #import "JXAccountTool.h"
+#import <MMDrawerController.h>
+#import "JXProfileViewController.h"
 
 @interface AppDelegate ()
 
@@ -29,7 +31,17 @@
     // 判断之前是否登录过
     JXAccount *currentAccount = [JXAccountTool currentAccount];
     if (!currentAccount.hasLogin) {
-        self.window.rootViewController = [[JXTabBarViewController alloc] init];
+        // 个人控制器
+        JXProfileViewController *profileVC = [[JXProfileViewController alloc] init];
+        
+        // tabBar控制器
+        JXTabBarViewController *taBarVC = [[JXTabBarViewController alloc] init];
+        
+        // 创建抽屉控制器
+        MMDrawerController *drawerController = [[MMDrawerController alloc] initWithCenterViewController:taBarVC leftDrawerViewController:profileVC];
+        [drawerController setOpenDrawerGestureModeMask:MMOpenDrawerGestureModeAll];
+        [drawerController setCloseDrawerGestureModeMask:MMCloseDrawerGestureModeAll];
+        self.window.rootViewController = drawerController;
     }
     else {
         JXLoginViewController *loginVC = [[JXLoginViewController alloc] init];

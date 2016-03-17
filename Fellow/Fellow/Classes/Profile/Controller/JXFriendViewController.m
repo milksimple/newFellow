@@ -7,6 +7,7 @@
 //
 
 #import "JXFriendViewController.h"
+#import "UIViewController+JXExtension.h"
 
 @interface JXFriendViewController ()
 
@@ -17,7 +18,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.view.backgroundColor = [UIColor purpleColor];
+    self.navigationItem.title = @"我的好友";
+    [self setNavBarColor:JXColor(249, 169, 49)];
 }
 
 - (void)didReceiveMemoryWarning {

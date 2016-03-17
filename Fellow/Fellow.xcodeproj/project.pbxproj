@@ -21,6 +21,8 @@
 		043A0F6D1C9A49CE004DE53E /* JXProfileHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 043A0F6C1C9A49CE004DE53E /* JXProfileHeaderView.m */; };
 		043A0F6F1C9A49E0004DE53E /* JXProfileHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 043A0F6E1C9A49E0004DE53E /* JXProfileHeaderView.xib */; };
 		043A0F721C9A5874004DE53E /* JXFriendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 043A0F711C9A5874004DE53E /* JXFriendViewController.m */; };
+		043A0F761C9A82CA004DE53E /* UIView+JXExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 043A0F751C9A82CA004DE53E /* UIView+JXExtension.m */; };
+		043A0F791C9A8D74004DE53E /* UIViewController+JXExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 043A0F781C9A8D74004DE53E /* UIViewController+JXExtension.m */; };
 		04F3A8291C911F39006B88F1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F3A8281C911F39006B88F1 /* main.m */; };
 		04F3A8341C911F39006B88F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04F3A8331C911F39006B88F1 /* Assets.xcassets */; };
 		04F3A8371C911F39006B88F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04F3A8351C911F39006B88F1 /* LaunchScreen.storyboard */; };
@@ -100,6 +102,10 @@
 		043A0F6E1C9A49E0004DE53E /* JXProfileHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JXProfileHeaderView.xib; sourceTree = "<group>"; };
 		043A0F701C9A5874004DE53E /* JXFriendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXFriendViewController.h; sourceTree = "<group>"; };
 		043A0F711C9A5874004DE53E /* JXFriendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JXFriendViewController.m; sourceTree = "<group>"; };
+		043A0F741C9A82CA004DE53E /* UIView+JXExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+JXExtension.h"; sourceTree = "<group>"; };
+		043A0F751C9A82CA004DE53E /* UIView+JXExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+JXExtension.m"; sourceTree = "<group>"; };
+		043A0F771C9A8D74004DE53E /* UIViewController+JXExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+JXExtension.h"; sourceTree = "<group>"; };
+		043A0F781C9A8D74004DE53E /* UIViewController+JXExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+JXExtension.m"; sourceTree = "<group>"; };
 		04F3A8241C911F39006B88F1 /* Fellow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fellow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04F3A8281C911F39006B88F1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		04F3A8331C911F39006B88F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -267,6 +273,15 @@
 				043A0F6E1C9A49E0004DE53E /* JXProfileHeaderView.xib */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		043A0F731C9A82CA004DE53E /* UIView + JXExtension */ = {
+			isa = PBXGroup;
+			children = (
+				043A0F741C9A82CA004DE53E /* UIView+JXExtension.h */,
+				043A0F751C9A82CA004DE53E /* UIView+JXExtension.m */,
+			);
+			path = "UIView + JXExtension";
 			sourceTree = "<group>";
 		};
 		04F3A81B1C911F39006B88F1 = {
@@ -467,6 +482,8 @@
 				52CAA63A1C98413C00A6761B /* Log */,
 				04F3A8761C912CAB006B88F1 /* UIColor+Hex.h */,
 				04F3A8771C912CAB006B88F1 /* UIColor+Hex.m */,
+				043A0F771C9A8D74004DE53E /* UIViewController+JXExtension.h */,
+				043A0F781C9A8D74004DE53E /* UIViewController+JXExtension.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -516,6 +533,7 @@
 		528EC5D01C91A6B100064D8E /* Libs */ = {
 			isa = PBXGroup;
 			children = (
+				043A0F731C9A82CA004DE53E /* UIView + JXExtension */,
 				043A0F461C98F8D3004DE53E /* Log */,
 				52CAA6361C98412200A6761B /* MBProgressHUD */,
 				528EC5D11C91A6CE00064D8E /* WaveLoadingIndicator.swift */,
@@ -787,6 +805,7 @@
 				04F3A8741C91251D006B88F1 /* JXQuestionViewController.m in Sources */,
 				528EC5CC1C91A63E00064D8E /* AppDelegate.m in Sources */,
 				52CAA6351C98410600A6761B /* JXAccountTool.m in Sources */,
+				043A0F791C9A8D74004DE53E /* UIViewController+JXExtension.m in Sources */,
 				043A0F721C9A5874004DE53E /* JXFriendViewController.m in Sources */,
 				043A0F531C990602004DE53E /* JXProvince.m in Sources */,
 				04F3A86E1C912371006B88F1 /* JXNavigationController.m in Sources */,
@@ -801,6 +820,7 @@
 				043A0F601C995073004DE53E /* JXProfileViewController.m in Sources */,
 				04F3A86B1C9122DC006B88F1 /* JXTabBarViewController.m in Sources */,
 				04F3A87B1C914457006B88F1 /* JXFilterToolbar.m in Sources */,
+				043A0F761C9A82CA004DE53E /* UIView+JXExtension.m in Sources */,
 				52CAA6511C9841E400A6761B /* JXCompanyInfo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -85,17 +85,32 @@
     return 20;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.section == 0) {
+        switch (indexPath.row) {
+            case 0: { // 我的好友
+                JXFriendViewController *friendVC = [[JXFriendViewController alloc] init];
+                JXNavigationController *friendNav = [[JXNavigationController alloc] initWithRootViewController:friendVC];
+                
+                [self.mm_drawerController closeDrawerAnimated:YES completion:^(BOOL finished) {
+                    CATransition * animation = [CATransition animation];
+                    animation.subtype = kCATransitionFromRight;
+                    friendVC.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+                    [self presentViewController:friendNav animated:YES completion:nil];
+                    
+                }];
+            }
+                break;
+                
+            default:
+                break;
+        }
+    }
+}
+
 #pragma mark - JXProfileHeaderViewDelegate
 - (void)profileHeaderViewDidClickedProfileInfoButton {
-    JXImpressionViewController * center = [[JXImpressionViewController alloc] init];
     
-    JXNavigationController * nav = [[JXNavigationController alloc] initWithRootViewController:center];
-    
-    JXFriendViewController *friendVC = [[JXFriendViewController alloc] init];
-    
-    [self.mm_drawerController setCenterViewController:nav withCloseAnimation:YES completion:^(BOOL finished) {
-        [nav pushViewController:friendVC animated:YES];
-    }];
 }
 
 - (void)dealloc {
